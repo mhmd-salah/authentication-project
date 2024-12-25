@@ -1,0 +1,47 @@
+div{
+  h2 {
+    font-size: 30px;
+  }
+  form {
+    input {
+      display: block;
+      width: 300px;
+      padding: 10px 20px;
+      font-size: 17px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+      outline: none;
+      border: black;
+      &:focus {
+        outline: 2px solid rgb(0, 167, 167);
+      }
+    }
+
+    .btnContainer {
+      display: flex;
+      justify-content: space-between;
+      button {
+        font-size: 17px;
+        padding-inline: 25px;
+        border-radius: 6px;
+        background-color: teal;
+        color: white;
+        border: none;
+        transition: background-color 0.1s;
+        &:hover {
+          background-color: rgb(1, 108, 108);
+        }
+        &:active {
+          transform: translate(2px, 1px);
+        }
+      }
+      .errMessage {
+        font-size: 13px;
+        color: rgb(208, 21, 21);
+        height: 13px;
+      }
+    }
+  }
+}

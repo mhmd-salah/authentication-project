@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "email": "mohamed@gmail.com",
+      "password": "$2a$10$EsaqNETLEY7LHtYvQSc61utKksCzCErcluAZU2eyl9iwYX4qqfMje",
+      "id": 1
+    },
+    {
+      "email": "dev.mhmdsalah@gmail.com",
+      "password": "$2a$10$DoURBFgO4b/X7rleWXDJIeVK7HiRKMs.1Rum0R9U/H8OwYhIelM2S",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "My First Post",
+      "author": "user@example.com"
+    },
+    {
+      "id": 2,
+      "title": "My second Post",
+      "author": "user@example.com"
+    }
+  ]
+}
