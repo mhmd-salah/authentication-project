@@ -1,19 +1,17 @@
 import Cookies from "universal-cookie";
 
 class AuthTokenManager {
-  static instance;
   #cookies;
   #tokenKey = "authToken";
   constructor() {
+    if (AuthTokenManager.instance) {
+      return AuthTokenManager.instance;
+    }
+    AuthTokenManager.instance = this;
     this.#cookies = new Cookies();
   }
-  static getInstance() {
-    if (!AuthTokenManager.instance) {
-      AuthTokenManager.instance = new AuthTokenManager();
-    }
-    return AuthTokenManager.instance;
-  }
 
+  // methods
   setToken(token) {
     this.#cookies.set(this.#tokenKey, token, {
       path: "/",
@@ -21,9 +19,8 @@ class AuthTokenManager {
       sameSite: "strict",
     });
   }
-
   hasToken() {
-    return !!this.getToken(this.#tokenKey) ;
+    return !!this.getToken(this.#tokenKey);
   }
 
   getToken() {
@@ -33,6 +30,7 @@ class AuthTokenManager {
   removeToken() {
     this.#cookies.remove(this.#tokenKey, { path: "/" });
   }
+
 }
 
 export default AuthTokenManager;

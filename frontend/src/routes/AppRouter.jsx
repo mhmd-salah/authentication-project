@@ -8,7 +8,7 @@ import { MainLayout } from "../layout";
 import { Error, Home, Login, Register } from "../pages";
 import ProtectedRoute from "./ProtectedRoute";
 
-const routes = createBrowserRouter(
+const appRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route errorElement={<Error />} element={<MainLayout />}>
       <Route path="/register" element={<Register />} />
@@ -22,7 +22,7 @@ const routes = createBrowserRouter(
 );
 
 const AppRouter = () => {
-  return <RouterProvider router={routes} />;
+  return <RouterProvider router={appRouter} />;
 };
 
 export default AppRouter;

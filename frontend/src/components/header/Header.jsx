@@ -1,8 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./styles.css";
-import AuthTokenManager from "../../global/AuthTokenManager";
+import AuthTokenManager from "../services/AuthTokenManager";
 const Header = () => {
-  const authManager = AuthTokenManager.getInstance();
+  const authManager = new AuthTokenManager();
   const navigate = useNavigate()
   const isLoggedIn = authManager.hasToken();
   console.log(isLoggedIn);

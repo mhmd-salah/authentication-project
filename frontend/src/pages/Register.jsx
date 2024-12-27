@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../config/axios.config";
-import AuthTokenManager from "../global/AuthTokenManager";
+import AuthTokenManager from "../services/AuthTokenManager";
 const Register = () => {
-  const authManager = AuthTokenManager.getInstance();
+  const authManager = new AuthTokenManager();
   const navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({
