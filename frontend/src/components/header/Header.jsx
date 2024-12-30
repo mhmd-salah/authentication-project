@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./styles.css";
-import AuthTokenManager from "../services/AuthTokenManager";
+import AuthTokenManager from "../../services/AuthTokenManager";
 const Header = () => {
   const authManager = new AuthTokenManager();
   const navigate = useNavigate()
